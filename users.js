@@ -25,6 +25,6 @@ const users = [
 let i = 0;
 for (const user of users) {
     const fileName = user.name.toLowerCase() + '.json';
-    await file.create('users', fileName, user);
-
+    const status = await file.create('users', fileName, user);
+    console.log(fileName, status);
 }
